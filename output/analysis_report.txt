@@ -1,0 +1,326 @@
+SMART FITNESS SESSION ANALYSIS REPORT
+sessions analysed: 8
+
+OVERVIEW
+session        participant  usable   classification
+------------------------------------------------------------------
+FIT-2026-001   P001         6/6      resting
+FIT-2026-002   P002         6/6      moderate_activity
+FIT-2026-003   P003         6/6      high_activity
+FIT-2026-004   P001         6/6      recovering
+FIT-2026-005   P002         5/5      insufficient_data
+FIT-2026-101   P001         1/5      insufficient_data
+FIT-2026-102   P002         0/4      insufficient_data
+FIT-2026-103   P003         0/1      insufficient_data
+
+==================================================================
+SESSION FIT-2026-001  |  participant P001 (Amina Noor)
+source: data/fitness_sessions.csv
+==================================================================
+
+PERSONAL REFERENCE VALUES
+  heart rate:    68.0 bpm
+  skin response: 1.2
+  temperature:   32.4 C
+
+DATA QUALITY
+  rows received:      6
+  rows usable:        6
+  rows rejected:      0 (0%)
+  avg signal quality: 0.97
+
+MEASUREMENT SUMMARIES
+  heart rate:        avg 68.83 bpm   min 68.0 bpm   max 70.0 bpm
+  skin response:     avg 1.19   min 1.17   max 1.22
+  temperature:       avg 32.43 C   min 32.4 C   max 32.5 C
+  activity level:    avg 0.09   min 0.07   max 0.12
+
+COMPARED WITH PERSONAL BASELINE
+  heart rate:     +0.83 bpm
+  skin response:  -0.01
+  temperature:    +0.03 C
+  activity level: 0.09
+
+RECOVERY CHECK
+  recovering: no
+  heart rate fell 1.0 bpm and movement fell 0.02 from the session peak to the final 2 window(s)
+
+CLASSIFICATION
+  RESTING
+  Heart rate stayed close to baseline (+0.8 bpm) with little movement (0.09).
+==================================================================
+
+==================================================================
+SESSION FIT-2026-002  |  participant P002 (Jonas Berg)
+source: data/fitness_sessions.csv
+==================================================================
+
+PERSONAL REFERENCE VALUES
+  heart rate:    74.0 bpm
+  skin response: 1.45
+  temperature:   32.7 C
+
+DATA QUALITY
+  rows received:      6
+  rows usable:        6
+  rows rejected:      0 (0%)
+  avg signal quality: 0.945
+
+MEASUREMENT SUMMARIES
+  heart rate:        avg 102.0 bpm   min 78.0 bpm   max 118.0 bpm
+  skin response:     avg 2.01   min 1.55   max 2.4
+  temperature:       avg 33.13 C   min 32.8 C   max 33.4 C
+  activity level:    avg 0.49   min 0.22   max 0.68
+
+COMPARED WITH PERSONAL BASELINE
+  heart rate:     +28.00 bpm
+  skin response:  +0.56
+  temperature:    +0.43 C
+  activity level: 0.49
+
+RECOVERY CHECK
+  recovering: no
+  heart rate fell 11.0 bpm and movement fell 0.15 from the session peak to the final 2 window(s)
+
+CLASSIFICATION
+  MODERATE_ACTIVITY
+  Heart rate was moderately raised (+28.0 bpm) with steady movement (0.49).
+==================================================================
+
+==================================================================
+SESSION FIT-2026-003  |  participant P003 (Maya Chen)
+source: data/fitness_sessions.csv
+==================================================================
+
+PERSONAL REFERENCE VALUES
+  heart rate:    63.0 bpm
+  skin response: 1.1
+  temperature:   32.3 C
+
+DATA QUALITY
+  rows received:      6
+  rows usable:        6
+  rows rejected:      0 (0%)
+  avg signal quality: 0.943
+
+MEASUREMENT SUMMARIES
+  heart rate:        avg 132.5 bpm   min 72.0 bpm   max 162.0 bpm
+  skin response:     avg 3.24   min 1.3   max 4.2
+  temperature:       avg 33.53 C   min 32.5 C   max 34.1 C
+  activity level:    avg 0.75   min 0.25   max 0.94
+
+COMPARED WITH PERSONAL BASELINE
+  heart rate:     +69.50 bpm
+  skin response:  +2.14
+  temperature:    +1.23 C
+  activity level: 0.75
+
+RECOVERY CHECK
+  recovering: no
+  heart rate fell 4.5 bpm and movement fell 0.03 from the session peak to the final 2 window(s)
+
+CLASSIFICATION
+  HIGH_ACTIVITY
+  Heart rate was far above baseline (+69.5 bpm) with sustained high movement (0.75).
+==================================================================
+
+==================================================================
+SESSION FIT-2026-004  |  participant P001 (Amina Noor)
+source: data/fitness_sessions.csv
+==================================================================
+
+PERSONAL REFERENCE VALUES
+  heart rate:    68.0 bpm
+  skin response: 1.2
+  temperature:   32.4 C
+
+DATA QUALITY
+  rows received:      6
+  rows usable:        6
+  rows rejected:      0 (0%)
+  avg signal quality: 0.957
+
+MEASUREMENT SUMMARIES
+  heart rate:        avg 113.17 bpm   min 72.0 bpm   max 151.0 bpm
+  skin response:     avg 2.58   min 1.35   max 3.9
+  temperature:       avg 33.28 C   min 32.6 C   max 33.9 C
+  activity level:    avg 0.55   min 0.18   max 0.92
+
+COMPARED WITH PERSONAL BASELINE
+  heart rate:     +45.17 bpm
+  skin response:  +1.38
+  temperature:    +0.88 C
+  activity level: 0.55
+
+RECOVERY CHECK
+  recovering: yes
+  heart rate fell 51.5 bpm and movement fell 0.59 from the session peak to the final 2 window(s)
+
+CLASSIFICATION
+  RECOVERING
+  Measurements decline towards the end of the session: heart rate fell 51.5 bpm and movement fell 0.59 from the session peak to the final 2 window(s). Average heart rate was +45.2 bpm relative to baseline.
+==================================================================
+
+==================================================================
+SESSION FIT-2026-005  |  participant P002 (Jonas Berg)
+source: data/fitness_sessions.csv
+==================================================================
+
+PERSONAL REFERENCE VALUES
+  heart rate:    74.0 bpm
+  skin response: 1.45
+  temperature:   32.7 C
+
+DATA QUALITY
+  rows received:      5
+  rows usable:        5
+  rows rejected:      0 (0%)
+  avg signal quality: 0.294
+  low confidence at:  t=0, 1, 2, 3, 4
+
+MEASUREMENT SUMMARIES
+  heart rate:        avg 87.8 bpm   min 76.0 bpm   max 101.0 bpm
+  skin response:     avg 1.77   min 1.5   max 2.1
+  temperature:       avg 32.9 C   min 32.7 C   max 33.1 C
+  activity level:    avg 0.26   min 0.12   max 0.42
+
+COMPARED WITH PERSONAL BASELINE
+  heart rate:     +13.80 bpm
+  skin response:  +0.32
+  temperature:    +0.20 C
+  activity level: 0.26
+
+RECOVERY CHECK
+  recovering: yes
+  heart rate fell 13.0 bpm and movement fell 0.17 from the session peak to the final 1 window(s)
+
+CLASSIFICATION
+  INSUFFICIENT_DATA
+  Only 5 of 5 rows were usable and average signal quality was 0.294. The session cannot be classified reliably.
+==================================================================
+
+==================================================================
+SESSION FIT-2026-101  |  participant P001 (Amina Noor)
+source: data/fitness_sessions_invalid.csv
+==================================================================
+
+PERSONAL REFERENCE VALUES
+  heart rate:    68.0 bpm
+  skin response: 1.2
+  temperature:   32.4 C
+
+DATA QUALITY
+  rows received:      5
+  rows usable:        1
+  rows rejected:      4 (80%)
+  avg signal quality: 0.96
+
+REJECTED ROWS (details in rejected_records.txt)
+  row 3:
+    - heart_rate: 'fast' cannot be converted to a number
+  row 4:
+    - participant_id: '001' is not a valid participant_id (expected P followed by 3 digits, e.g. P001)
+  row 5:
+    - activity_level: is missing (empty value)
+  row 6:
+    - signal_quality: 1.4 outside plausible range 0.0-1.0
+
+MEASUREMENT SUMMARIES
+  heart rate:        avg 72.0 bpm   min 72.0 bpm   max 72.0 bpm
+  skin response:     avg 1.3   min 1.3   max 1.3
+  temperature:       avg 32.5 C   min 32.5 C   max 32.5 C
+  activity level:    avg 0.1   min 0.1   max 0.1
+
+COMPARED WITH PERSONAL BASELINE
+  heart rate:     +4.00 bpm
+  skin response:  +0.10
+  temperature:    +0.10 C
+  activity level: 0.10
+
+RECOVERY CHECK
+  too few usable windows to judge a trend
+
+CLASSIFICATION
+  INSUFFICIENT_DATA
+  Only 1 of 5 rows were usable and average signal quality was 0.96. The session cannot be classified reliably.
+==================================================================
+
+==================================================================
+SESSION FIT-2026-102  |  participant P002 (Jonas Berg)
+source: data/fitness_sessions_invalid.csv
+==================================================================
+
+PERSONAL REFERENCE VALUES
+  heart rate:    74.0 bpm
+  skin response: 1.45
+  temperature:   32.7 C
+
+DATA QUALITY
+  rows received:      4
+  rows usable:        0
+  rows rejected:      4 (100%)
+
+REJECTED ROWS (details in rejected_records.txt)
+  row 8:
+    - participant_id: unknown participant 'P999' (not in the profiles file)
+  row 9:
+    - timestamp: 'two' cannot be converted to a whole number
+  row 10:
+    - heart_rate: -15.0 outside plausible range 30.0-220.0
+  row 11:
+    - temperature: 55.0 outside plausible range 25.0-42.0
+    - activity_level: 1.3 outside plausible range 0.0-1.0
+    - skin_response: -0.5 is negative
+
+MEASUREMENT SUMMARIES
+  heart rate:        no usable data
+  skin response:     no usable data
+  temperature:       no usable data
+  activity level:    no usable data
+
+COMPARED WITH PERSONAL BASELINE
+  no usable data to compare
+
+RECOVERY CHECK
+  too few usable windows to judge a trend
+
+CLASSIFICATION
+  INSUFFICIENT_DATA
+  Only 0 of 4 rows were usable and average signal quality was unknown. The session cannot be classified reliably.
+==================================================================
+
+==================================================================
+SESSION FIT-2026-103  |  participant P003 (Maya Chen)
+source: data/fitness_sessions_invalid.csv
+==================================================================
+
+PERSONAL REFERENCE VALUES
+  heart rate:    63.0 bpm
+  skin response: 1.1
+  temperature:   32.3 C
+
+DATA QUALITY
+  rows received:      1
+  rows usable:        0
+  rows rejected:      1 (100%)
+
+REJECTED ROWS (details in rejected_records.txt)
+  row 12:
+    - row: expected 8 fields but found 7
+
+MEASUREMENT SUMMARIES
+  heart rate:        no usable data
+  skin response:     no usable data
+  temperature:       no usable data
+  activity level:    no usable data
+
+COMPARED WITH PERSONAL BASELINE
+  no usable data to compare
+
+RECOVERY CHECK
+  too few usable windows to judge a trend
+
+CLASSIFICATION
+  INSUFFICIENT_DATA
+  Only 0 of 1 rows were usable and average signal quality was unknown. The session cannot be classified reliably.
+==================================================================
