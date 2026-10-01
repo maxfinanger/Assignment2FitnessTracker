@@ -247,7 +247,7 @@ The scenario tests write the generator's output to temporary CSV files and load 
 * **Thresholds are hand set, not learned.** They are tuned against one simulated data source and would need re-examining on real labelled data.
 * **A row is rejected if any one field is bad**, even when the others are fine. Salvaging partial rows would recover more data at the cost of more complicated bookkeeping.
 * **A session's participant is decided by its first row that names a valid, known participant.** Later rows that disagree are rejected rather than the first row being second-guessed.
-* **Session IDs are grouped per file.** If the same ID appeared in two files it would be analysed as two separate sessions.
+* **Session IDs are grouped per file.** If the same ID appeared in two files it would be analyzed as two separate sessions.
 * **Skin response and temperature are reported but do not affect classification**; the rules use heart rate and activity level only.
 * **Recovery detection needs at least three usable rows** and compares thirds of the session, so it is noisy on very short sessions.
 * **Heart rates print as `68.0`** rather than `68`, because all measurements are converted to `float`.

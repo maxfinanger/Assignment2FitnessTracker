@@ -111,7 +111,21 @@ class DataQualityTests(unittest.TestCase):
         session.record_rejection(RejectedRecord("f.csv", 2, (("x", "y"),)))
         result = analyze_session(session)
         self.assertEqual(label(result), "insufficient_data")
-        self.assertIn("0 of 1", result["classification"]["explanation"])
+        self.assertIn("only 0 of 1 rows were usable", result["classification"]["explanation"])
+
+    def test_explanation_names_the_real_reason(self):
+        # all rows usable, but the signal is weak: must blame signal quality, not row count
+        weak = make_session([make_observation(timestamp=t, signal_quality=0.3) for t in range(5)])
+        text = analyze_session(weak)["classification"]["explanation"]
+        self.assertIn("average signal quality was 0.3", text)
+        self.assertNotIn("usable", text)
+        # plenty of clean signal, but too many rows rejected: must blame the rejections
+        many_rejected = make_session([make_observation(timestamp=t) for t in range(5)])
+        for i in range(4):
+            many_rejected.record_rejection(RejectedRecord("f.csv", i + 2, (("x", "y"),)))
+        text = analyze_session(many_rejected)["classification"]["explanation"]
+        self.assertIn("44% of rows were rejected", text)
+        self.assertNotIn("signal quality", text)
 
 
 class ClassificationTests(unittest.TestCase):

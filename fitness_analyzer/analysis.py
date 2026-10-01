@@ -219,25 +219,33 @@ def classify_session(quality: Dict, comparison: Dict, recovery: Dict) -> Dict[st
     can sit at almost any average intensity and would otherwise be
     mislabelled by the level-based rules below it.
     """
+    # Name every reason the gate failed, so the explanation states the real
+    # cause (for example a session with 5 of 5 usable rows but very weak
+    # signal must not be described as having "too few rows").
+    reasons = []
+    if quality["usable_observations"] < MIN_VALID_OBSERVATIONS:
+        reasons.append(
+            f"only {quality['usable_observations']} of {quality['total_observations']} "
+            f"rows were usable (at least {MIN_VALID_OBSERVATIONS} needed)"
+        )
+    if quality["invalid_fraction"] > MAX_INVALID_FRACTION:
+        reasons.append(
+            f"{quality['invalid_fraction']:.0%} of rows were rejected "
+            f"(at most {MAX_INVALID_FRACTION:.0%} allowed)"
+        )
     if (
-        quality["usable_observations"] < MIN_VALID_OBSERVATIONS
-        or quality["invalid_fraction"] > MAX_INVALID_FRACTION
-        or (
-            quality["average_signal_quality"] is not None
-            and quality["average_signal_quality"] < MIN_AVERAGE_SIGNAL_QUALITY
-        )
+        quality["average_signal_quality"] is not None
+        and quality["average_signal_quality"] < MIN_AVERAGE_SIGNAL_QUALITY
     ):
-        quality_text = (
-            f"{quality['average_signal_quality']}"
-            if quality["average_signal_quality"] is not None
-            else "unknown"
+        reasons.append(
+            f"average signal quality was {quality['average_signal_quality']} "
+            f"(at least {MIN_AVERAGE_SIGNAL_QUALITY} needed)"
         )
+    if reasons:
         return {
             "label": "insufficient_data",
             "explanation": (
-                f"Only {quality['usable_observations']} of {quality['total_observations']} "
-                f"rows were usable and average signal quality was {quality_text}. "
-                "The session cannot be classified reliably."
+                "The session cannot be classified reliably: " + "; ".join(reasons) + "."
             ),
         }
 

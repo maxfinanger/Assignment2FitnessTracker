@@ -196,7 +196,7 @@ RECOVERY CHECK
 
 CLASSIFICATION
   INSUFFICIENT_DATA
-  Only 5 of 5 rows were usable and average signal quality was 0.294. The session cannot be classified reliably.
+  The session cannot be classified reliably: average signal quality was 0.294 (at least 0.6 needed).
 ==================================================================
 
 ==================================================================
@@ -242,7 +242,7 @@ RECOVERY CHECK
 
 CLASSIFICATION
   INSUFFICIENT_DATA
-  Only 1 of 5 rows were usable and average signal quality was 0.96. The session cannot be classified reliably.
+  The session cannot be classified reliably: only 1 of 5 rows were usable (at least 3 needed); 80% of rows were rejected (at most 30% allowed).
 ==================================================================
 
 ==================================================================
@@ -286,7 +286,7 @@ RECOVERY CHECK
 
 CLASSIFICATION
   INSUFFICIENT_DATA
-  Only 0 of 4 rows were usable and average signal quality was unknown. The session cannot be classified reliably.
+  The session cannot be classified reliably: only 0 of 4 rows were usable (at least 3 needed); 100% of rows were rejected (at most 30% allowed).
 ==================================================================
 
 ==================================================================
@@ -322,5 +322,5 @@ RECOVERY CHECK
 
 CLASSIFICATION
   INSUFFICIENT_DATA
-  Only 0 of 1 rows were usable and average signal quality was unknown. The session cannot be classified reliably.
+  The session cannot be classified reliably: only 0 of 1 rows were usable (at least 3 needed); 100% of rows were rejected (at most 30% allowed).
 ==================================================================
