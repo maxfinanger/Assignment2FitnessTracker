@@ -178,11 +178,11 @@ There is no `except Exception`, no bare `except`, and no empty `except` block. A
 
 ### What happens when things go wrong
 
-| Situation | Behaviour |
+| Situation | Behavior |
 |---|---|
 | A row is invalid | recorded in `rejected_records.txt`, skipped, run continues |
 | A session file is missing or unreadable | listed under "files that could not be read", other files still processed, exit code 1 |
-| The profiles file is missing or unreadable | error on stderr, exit code 2 (nothing can be analysed without baselines) |
+| The profiles file is missing or unreadable | error on stderr, exit code 2 (nothing can be analyzed without baselines) |
 | The output directory does not exist | created, including parents |
 | The output path is a file, or is not writable | clear error, exit code 2 |
 
