@@ -11,7 +11,7 @@ This program analyses simulated wearable fitness sessions. In Assignment I the d
 
 For each session the program reports averages, minimums and maximums, the difference from the participant's personal reference values, whether the participant is recovering towards the end, and a classification (`resting`, `moderate_activity`, `high_activity`, `recovering`, `uncertain` or `insufficient_data`) with a written reason.
 
-I have used Claude as a tool when developing this assignment. I used it to help me write this README and to help extend my Assignment I solution into the package structure, error handling and tests required by Assignment II.
+This assignment 2 is a branched out from my original assignment 1. I used Claude as a tool when developing this assignment. Specifically I used it as a tool to help me write this README and to help further develop my assignment solution into the new package structure, error handling and tests required by Assignment II.
 
 The instructor-supplied `data_generator.py` is included unmodified. The program itself no longer uses it: it is used only by the tests, which turn its output into CSV files to check the classification rules against many seeds.
 
@@ -236,9 +236,9 @@ The `output/` directory is created if it does not exist. Files are overwritten o
 * `test_models.py`: encapsulation, composition, inheritance and overriding, and validation **boundaries** (values exactly on and just beyond every limit).
 * `test_loader.py`: the official files (row-by-row expectations for the invalid file), wrong row lengths, unconvertible and missing values, duplicate timestamps, participant conflicts, profile validation, boundary values, and **file errors** (missing file, permission denied, directory, empty file, missing column, bad encoding, malformed CSV, BOM, reordered columns).
 * `test_analysis.py`: calculations, recovery cases, data-quality gate boundaries (exactly 3 usable rows, exactly 30% rejected, signal quality 0.60 vs 0.59), threshold edges, and the generator's five scenarios run through real CSV files across several seeds.
-* `test_cli.py`: output directory creation, the three files' contents, identical output across two runs, stale files overwritten, missing profiles file (fatal), missing session file (skipped), unwritable output.
+* `test_cli.py`: output directory creation, the three files contents, identical output across two runs, stale files overwritten, missing profiles file (fatal), missing session file (skipped), unwritable output.
 
-The scenario tests write the generator's output to temporary CSV files and load it through the real loader, so they exercise the full pipeline including rejection of the poor-quality scenario's deliberately broken rows. Running 300 seeds of each of the five scenarios classified all 1,500 sessions correctly.
+The scenario tests write the generators output to temporary CSV files and load it through the real loader, so they exercise the full pipeline including rejection of the poor-quality scenarios deliberately broken rows. Running 300 seeds of each of the five scenarios classified all 1,500 sessions correctly.
 
 ---
 
